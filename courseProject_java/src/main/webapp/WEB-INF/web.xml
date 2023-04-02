@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+
+
+
+    //Сервлет начального окна
+    <servlet>
+        <servlet-name>welcome</servlet-name>
+        <servlet-class>com.social_network.Servlets.WelcomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>welcome</servlet-name>
+        <url-pattern>/welcomePage</url-pattern>
+    </servlet-mapping>
+
+
+
+    //Сервлет регистрации пользователя
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.social_network.Servlets.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    //Сервлет подтверждения регистрации
+    <servlet>
+        <servlet-name>regDone</servlet-name>
+        <servlet-class>com.social_network.Servlets.RegistrationDone</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>regDone</servlet-name>
+        <url-pattern>/regDone</url-pattern>
+    </servlet-mapping>
+
+
+
+    //Сервлет ввода данных
+    <servlet>
+        <servlet-name>input</servlet-name>
+        <servlet-class>com.social_network.Servlets.InputServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>input</servlet-name>
+        <url-pattern>/input</url-pattern>
+    </servlet-mapping>
+
+
+    //Сервлет проверки этих данных и в случае успеха перехода в профиль
+    <servlet>
+        <servlet-name>profile</servlet-name>
+        <servlet-class>com.social_network.Servlets.MainPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>profile</servlet-name>
+        <url-pattern>/profile</url-pattern>
+    </servlet-mapping>
+
+    //Сервлет вывода аватарки
+    <servlet>
+        <servlet-name>displayPhoto</servlet-name>
+        <servlet-class>com.social_network.Servlets.DisplayPhoto</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>displayPhoto</servlet-name>
+        <url-pattern>/profilePhoto</url-pattern>
+    </servlet-mapping>
+
+
+    //Сервлет отрисовки друзей
+    <servlet>
+        <servlet-name>friends</servlet-name>
+        <servlet-class>com.social_network.Servlets.FriendPage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>friends</servlet-name>
+        <url-pattern>/friend</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+</web-app>
